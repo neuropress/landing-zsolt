@@ -12,7 +12,7 @@ const therapyOptions = [
 	"Biorezonancia vizsgálat",
 ];
 
-const locationOptions = ["Budapest XI. ker", "Szeged", "Kecskemét"];
+const locationOptions = ["Budapest XII. ker", "Győr", "Dunaszerdahely"];
 
 const locations: Record<
 	string,
@@ -24,26 +24,26 @@ const locations: Record<
 		email: string;
 	}
 > = {
-	"Budapest XI. ker": {
-		address: "1117 Budapest, Fehérvári út 23. I/11.",
-		phone: "+36-30/434-7094",
-		phoneHref: "tel:+36304347094",
+	"Budapest XII. ker": {
+		address: "1123 Budapest, Kék golyó u. 6.",
+		phone: "+36-30/777-7033",
+		phoneHref: "tel:+36307777033",
 		hours: "Hétfő – Péntek 07:00 – 21:00",
-		email: "neuropress11@gmail.com",
+		email: "neuropressbuda12@gmail.com",
 	},
-	Szeged: {
-		address: "6724 Szeged, Kálvária tér 16. I/D",
-		phone: "+36-30/372-4600",
-		phoneHref: "tel:+36303724600",
+	Győr: {
+		address: "9027 Győr, Madách utca 22.",
+		phone: "+36-70/341-5951",
+		phoneHref: "tel:+36703415951",
 		hours: "Hétfő – Péntek 07:00 – 21:00",
-		email: "vargha.szeged@gmail.com",
+		email: "neuropressgyor@gmail.com",
 	},
-	Kecskemét: {
-		address: "6000 Kecskemét, Vízöntő u. 9.",
-		phone: "+36-30/944-2528",
-		phoneHref: "tel:+36309442528",
+	Dunaszerdahely: {
+		address: "Dunaszerdahely, Galántai út 658.",
+		phone: "+421-911-627-644",
+		phoneHref: "tel:+421911627644",
 		hours: "Hétfő – Péntek 07:00 – 21:00",
-		email: "vargha.kecskemet@gmail.com",
+		email: "neuropress@azet.sk",
 	},
 };
 
@@ -81,7 +81,7 @@ const emptyForm: FormState = {
 	phone: "",
 	email: "",
 	therapy: "",
-	location: "Budapest XI. ker",
+	location: "Budapest XII. ker",
 	message: "",
 };
 
@@ -90,7 +90,7 @@ const Contact = () => {
 	const [form, setForm] = useState<FormState>(emptyForm);
 	const [errors, setErrors] = useState<Errors>({});
 	const [sending, setSending] = useState(false);
-	const [cardLocation, setCardLocation] = useState<string>("Budapest XI. ker");
+	const [cardLocation, setCardLocation] = useState<string>("Budapest XII. ker");
 
 	useEffect(() => {
 		const handler = (e: CustomEvent<string>) => {

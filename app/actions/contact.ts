@@ -3,9 +3,9 @@
 import nodemailer from "nodemailer";
 
 const LOCATION_EMAILS: Record<string, string> = {
-	"Budapest XI. ker": "neuropress11@gmail.com",
-	Szeged: "vargha.szeged@gmail.com",
-	Kecskemét: "vargha.kecskemet@gmail.com",
+	"Budapest XII. ker": "neuropressbuda12@gmail.com",
+	Győr: "neuropressgyor@gmail.com",
+	Dunaszerdahely: "neuropress@azet.sk",
 };
 
 const THERAPY_OPTIONS = new Set([

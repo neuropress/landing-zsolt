@@ -7,27 +7,35 @@ import FadeContent from "./gsap/FadeContent";
 
 const testimonials = [
 	{
-		name: "Trokán Nóra",
-		profileImage: "/images/testi/6.webp",
+		name: "Nyári Dia",
+		profileImage: "/images/testi/1.webp",
 		symptom: "színésznő",
 		solution:
-			"„A tudatosság nem más, mint az elménk fölötti hatalmunkra való ráébredés. A tudatosodás pedig az elme fölötti uralom gyakorlásának útja.” Büszkék vagyunk Trokán Nórára, amiért nem csak figyelt a szervezete jelzéseire, de képes volt a nehezebb utat választani és változtatni az egészsége érdekében. Ma már sokkal jobban érzi magát és az epegörcsök sem gyötrik.",
+			"„Nyári Dia életét évek óta megnehezítették a migrénes panaszok. Ha jött a fejgörcs, elvonult egy sötét szobába és még a fájdalomcsillapító sem enyhítette fájdalmát. Volt, hogy gyermekét is alig tudta ellátni, annyira szenvedett. Ma pedig, alig fél évvel az első kezelés után, búcsút intett a migrénnek és alig várja az allergiaszezont, ami korábban maga volt a rémálom számára. Vargha Zsolt és a NeuroPress Terápia segítségével szervezete ellanállóbb lett, ő pedig tudatosabb, jobban érti teste jelzéseit.",
 		rating: 5,
 	},
 	{
-		name: "Szabó Zsófi",
-		profileImage: "/images/testi/5.webp",
-		symptom: "színésznő, műsorvezető",
-		solution:
-			"Szabó Zsófi évek óta szenved a migréntől. Már szinte az élete részévé vált a vissza-visszatérő, elviselhetetlen fájdalom, az átvirrasztott éjszakák, a kimerültség. Egy ismerősétől hallott először a NeuroPress Terápiáról és az esélytelenek nyugalmával érkezett az állapotfelmérésre, hiszen korábban már több gyógymód is hatástalannak bizonyult nála. Vargha Attila azonban rámutatott arra, hogy a migrén csupán a jéghegy csúcsa és az egész szervezetet kell vizsgálni.",
-		rating: 5,
-	},
-	{
-		name: "Polgár Odett",
+		name: "Vastag Csaba",
 		profileImage: "/images/testi/4.webp",
+		symptom: "énekes, színész",
+		solution:
+			"„Vastag Csaba évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
+		rating: 5,
+	},
+	{
+		name: "Vastaghné Domján Evelin",
+		profileImage: "/images/testi/3.webp",
 		symptom: "színésznő",
 		solution:
-			"Polgár Odett színésznőként és édesanyaként is rengeteg stressznek van kitéve, ami hosszú távon az egészségére is hatással volt. A NeuroPress Terápia segítségével sikerült megtalálnia a belső egyensúlyt és megszabadulnia a krónikus fáradtságtól, ami korábban mindennapjait megnehezítette. Odett most már sokkal energikusabbnak érzi magát és képes teljes mértékben élvezni a munkáját és a családi életét.",
+			"„Vastaghné Domján Evelin évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
+		rating: 5,
+	},
+	{
+		name: "Vajna Tímea",
+		profileImage: "/images/testi/2.webp",
+		symptom: "üzletasszony, műsorvezető",
+		solution:
+			"„Vajna Tímea évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
 		rating: 5,
 	},
 ];

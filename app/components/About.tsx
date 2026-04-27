@@ -28,7 +28,7 @@ const About = () => {
 						<div className="bg-primary-light rounded-2xl p-8 flex flex-col items-start text-start">
 							<div className="relative w-20 h-20 rounded-full overflow-hidden mb-6 shadow-md">
 								<Image
-									src="/images/attila.webp"
+									src="/images/refo/39.jpg"
 									alt="Vargha Attila"
 									fill
 									className="object-cover object-center"
@@ -36,13 +36,13 @@ const About = () => {
 								/>
 							</div>
 							<p className="text-gray-700 font-light text-sm leading-relaxed italic mb-6">
-								&ldquo;Szakértelem-Hatékonyság-Egészség&rdquo; <br /> Vargha
-								Attila vagyok, a NeuroPress Terápia vezető terapeutája,
-								Budapesten a XI. kerületben, Kecskeméten és Szegeden vezetem a
-								NeuroPress rendelőket, közel 20 éve.
+								&ldquo;Tedd azt, amit szeretsz és szeresd azt, amit
+								csinálsz.&rdquo; <br /> Vargha Zsolt Sebastian vagyok,
+								Budapesten a XII. kerületben, Győrben és Dunaszerdahelyen
+								vezetem a NeuroPress rendelőket, közel 20 éve.
 							</p>
 							<div className="border-t border-gray-200 w-16 mb-4" />
-							<p className="text-sm font-medium text-gray-900">Vargha Attila</p>
+							<p className="text-sm font-medium text-gray-900">Vargha Zsolt</p>
 							<p className="text-xs font-light text-gray-400 mt-1">
 								Intézményvezető
 							</p>
@@ -55,19 +55,21 @@ const About = () => {
 						threshold={0.2}
 						className="w-full">
 						<p className="text-md md:text-lg text-gray-700 font-light text-start w-full">
-							Németországban nevelkedtem, majd ott végeztem közgazdasági szakon.
-							Mindig érdekelt az egészség és az azzal kapcsolatos témakörök.{" "}
+							Erdélyben születtem, gyermekkoromat az USA-ban töltöttem, ahol
+							sérült gyerekeket segítettem önkéntesként. Érettségi után
+							Budapestre költöztem, ahol édesapám által kifejlesztett kezelési
+							módszert tanulmányoztam, amely a szervezet öngyógyító folyamatait
+							aktiválva kiemelkedő eredményeket ért el. <br />
 							<br />
-							<br />
-							2001-ben Magyarországra költöztem és a családi vállalkozásba
-							beléptem, ahol Édesapám ennek a terápiának az alapjait kidolgozta.
-							A terápia eredményei meggyőztek, így egyértelmű volt számomra,
-							hogy ezt szeretném tovább vinni és fejleszteni. <br />
-							<br />
-							Elvégeztem a természetgyógyászati iskolát reflexológiai
-							szakképesítéssel, valamint funkcionális táplálkozási- és
-							hormonegyensúly tanácsadó képesítéssel. Nincs nagyobb motiváció
-							számomra, mint a hozzánk forduló pácienseink gyógyulásának öröme.
+							Elvégeztem a parapszichológia, gyógymasszőr, gyógytornász,
+							reflexológia, természetes gyógymódok szakértő és funkcionális
+							táplálkozási képzéseket. Folyamatosan továbbképzem magam az
+							egészségmegőrzés területén. <br />
+							<br />A Neuropress terápia a betegségek okait kezeli,
+							mellékhatások nélkül segítve a szervezet öngyógyítását.
+							Feleségemmel, aki szintén egészségfejlesztő, közösen dolgozunk
+							pácienseink gyógyulásán. &ldquo;A gyógyítás számunkra
+							életfeladat!&rdquo;
 						</p>
 					</FadeContent>
 				</div>

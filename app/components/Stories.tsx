@@ -13,73 +13,74 @@ const testimonials = [
 		name: "Kovács Gergelyné Kránicz Szilvia",
 		link: "https://www.neuropress.hu/elementor-17040/",
 		profileImage: "/images/stories/4.webp",
-		symptom: "Hormonális egyensúlyzavar, meddőség",
+		symptom: "Termékenységi zavar",
 		solution:
-			"Az állapotfelmérés idegrendszeri terhelést és felszívódási zavart mutatott. Biorezonanciás kezelések, életmódváltás (több állati zsiradék, glutén- és cukormentesség) és AVIVA torna hatására rendszeressé vált a ciklusa, a hormonértékek normalizálódtak, és természetes úton terhes lett.",
+			"Négy és fél év hormonkezelés és inszemináció után Vargha Zsolt terápiája következett. Szigorú életmód- és táplálkozási szabályok, eleinte fájdalmas kezelések, de 5 hónappal később pozitív terhességi teszt. Terhesen is jártam kezelésre. Albert megszületésével kiteljesedett a családunk.",
 	},
+
 	{
-		name: "Szekeres Tünde - Marci",
-		link: "https://www.neuropress.hu/szekeres-tunde-marci-baba/",
+		name: "Linda",
+		link: "https://www.neuropress.hu/linda/",
 		profileImage: "/images/stories/5.webp",
-		symptom: "Vetélés utáni meddőség",
+		symptom: "Ekcéma, menstruációs panaszok, emésztési problémák",
 		solution:
-			"A vetélés után felborult ciklust Neuropress kezelésekkel rendezték. Régi páciensként tért vissza, és az életmódváltással együtt 5 hónapon belül ismét pozitív tesztet tarthatott a kezében. A szegedi csapat minden lépésnél mellette állt.",
+			"Nagy László ajánlására kerestem fel a Neuropresst menstruációs, emésztési problémák, ekcéma és aranyér miatt. Vargha Zsolt biorezonanciás vizsgálat után azonnal kezelésbe vett. Öt hónap alatt heti két kezeléssel tünetmentes lettem, tele energiával.",
 	},
 	{
-		name: "Doernbrack Berni",
-		link: "https://www.neuropress.hu/doernbrack-bernadett/",
-		profileImage: "/images/stories/2.webp",
-		symptom: "Pajzsmirigy, inzulinrezisztencia, meddőség",
-		solution:
-			"Vargha Attila a tünetek okát a felszívódási zavarban találta meg. A célzott kezelések és életmódváltás hatására fél év alatt terhes lett – lombik program helyett. A Neuropress terápia ott segített, ahol a gyógyszeres kezelések nem tudtak.",
-	},
-	{
-		name: "Kaiser Tatjana Viktória",
-		link: "https://www.neuropress.hu/kaiser-tatjana-viktoria/",
-		profileImage: "/images/stories/3.webp",
-		symptom: "Fájdalmas menstruáció",
-		solution:
-			"A heti kezelések során a fájdalmak megszűntek, és egy teljesen új életmódot is kapott. A csapat nemcsak szakemberként, hanem igazi társként kísérte végig az úton. A kezelés végére a tünetek teljesen eltűntek, és új emberként lépett ki az ajtón.",
-	},
-	{
-		name: "Urban Viola",
-		link: "https://www.neuropress.hu/urban-viola/",
-		profileImage: "/images/stories/8.webp",
-		symptom: "Migrén, puffadás, rendszertelen ciklus",
-		solution:
-			"Több orvos is azt mondta, minden rendben van – de ő nem érezte jól magát. A Neuropress kezelések és az életmódváltás hatására elmúlt a migrén, rendszeressé és fájdalommentessé vált a ciklusa, a puffadás megszűnt, és az alvása is helyreállt.",
-	},
-	{
-		name: "Tóth Zita és Heger Hanna",
-		link: "https://www.neuropress.hu/toth-zita-es-heger-hanna/",
-		profileImage: "/images/stories/7.webp",
-		symptom: "Hashimoto, emésztési rendellenesség",
-		solution:
-			"Heti 2 kezeléssel és az életmódváltással mindketten meggyógyultak: elmúltak a fájdalmak, Hanna 9, Zita 12 kg-ot fogyott. A PM értékek és az antiTPO is normalizálódott. Az endokrinológus csak annyit mondott: \u201eNe hagyja abba, jó az irány.\u201d",
-	},
-	{
-		name: "Bernáth László",
-		link: "https://www.neuropress.hu/bernath-laszlo/",
-		profileImage: "/images/stories/1.webp",
-		symptom: "Autoimmun betegség, ízületi fájdalmak",
-		solution:
-			"Az étkezési szokások megváltoztatása és a rendszeres kezelések hatására az emésztés kiváló lett, az alvás rendezetté vált, a stressztűrő képesség megnőtt, az ízületi fájdalmak és bizsergések enyhültek. Erőteljesebbnek érzi magát, mint valaha.",
-	},
-	{
-		name: "Varga Zsolt Dominik",
-		link: "https://www.neuropress.hu/elementor-17449/",
+		name: "Somodi Áron",
+		link: "https://www.neuropress.hu/somodi-aron/",
 		profileImage: "/images/stories/9.webp",
-		symptom: "Pattanásos bőr",
+		symptom: "Asztma, allergia",
 		solution:
-			"Az állapotfelmérés feltárta a bőrtünetek belső okait. A kitartó kezelések és a szegedi csapat szaktudásának köszönhetően mára teljesen tünetmentes. Mindössze elkötelezettség és a Neuropress tudása kellett a látványos változáshoz.",
+			"Több mint tíz éven át kajakoztam, majd visszatért egy asztmás tünet. Szteroiddal kezelték, nem tudtam elhagyni. A NeuroPress terápia 7 hónap után javulást hozott. Új szemléletet tanultam, gyógyszer nélkül gyógyultam. Heti háromszor erősen sportolok.",
 	},
 	{
-		name: "Szőke-Kis László",
-		link: "https://www.neuropress.hu/szoke-kis-laszlo/",
-		profileImage: "/images/stories/6.webp",
-		symptom: "Parkinson-kór, reflux",
+		name: "Vargová Andrea",
+		link: "https://www.neuropress.hu/andrea-vargova/",
+		profileImage: "/images/stories/3.webp",
+		symptom: "Termékenységi zavar",
 		solution:
-			"A kezelések alatt a reflux gyógyszereit teljesen elhagyta, tünetmentesen. A terápia után fokozatosan javultak a Parkinson-tünetek: visszatért a jobb kéz használata, javult a beszéd és a mozgáskoordináció. Szinte minden tünete enyhült.",
+			"Kilenc év próbálkozás, négy sikertelen beültetés után 2021 májusában kezdtük a Neuropress terápiát. Másfél év kitartás után az ötödik beültetés pozitív lett. 2023 júniusában megszületett kislányunk, Zoé. Köszönet Vargha Zsoltnak és Viktóriának!",
+	},
+	{
+		name: "Dr. Kálmár Sándor Flóris",
+		link: "https://www.neuropress.hu/dr-kalmar-sandor-floris/",
+		profileImage: "/images/stories/4.webp",
+		symptom: "Reflux, derékfájás",
+		solution:
+			"Sok éve refluxos tünetekkel küszködtem, napi protonpumpa-gátlókat szedtem. Vargha Zsolt rávilágított a tünetek összefüggéseire. Két hónap után letettem a gyógyszereket. Néhány hónap alatt szinte minden tünet megszűnt, csak életmódot kellett változtatni.",
+	},
+	{
+		name: "Lukovics János",
+		link: "https://www.neuropress.hu/lukovics-janos/",
+		profileImage: "/images/stories/6.webp",
+		symptom: "Szédülés, fejfájás",
+		solution:
+			"2020-ban szédülés, gyengeség és fejfájás kínzott. Több orvos, gyógyszer, semmi javulás. Depresszió és pánikbetegség társult. 2021-ben a feleségem unszolására Vargha Zsolt személyre szabott terápiát írt elő. Hónapok alatt minden tünet elmúlt. Köszönet Marcsinak is!",
+	},
+	{
+		name: "Ötvösné Melinda",
+		link: "https://www.neuropress.hu/otvosne-melinda/",
+		profileImage: "/images/stories/8.webp",
+		symptom: "Magas vérnyomás, alvászavar",
+		solution:
+			"Covid után rossz közérzet, magas vérnyomás, kimerültség, alvászavar kínzott. Gyógyszeres kezelés sem segített. Három hónap Neuropress terápia után tünetmentes vagyok. Továbbra is folytatom a jó állapot megőrzése érdekében. Köszönet Vargha Zsoltnak és Rékának!",
+	},
+	{
+		name: "Mondovics Dukai Anett",
+		link: "https://www.neuropress.hu/mirko-baba/",
+		profileImage: "/images/stories/7.webp",
+		symptom: "Termékenységi zavar",
+		solution:
+			"Barbi mesélt a NeuroPress Terápiáról. Férjemmel babát terveztünk, ellenőrizni akartam a szervezetem. Néhány kezelés után áldott állapotba kerültem! 2022.09.18-án megszületett Mirkó, aki új értelmet adott életünknek. A Neuropressnél születnek a csodák.",
+	},
+	{
+		name: "Andersh Gábor",
+		link: "https://www.neuropress.hu/andersh-gabor/",
+		profileImage: "/images/stories/2.webp",
+		symptom: "Emésztőrendszeri panaszok, reflux",
+		solution:
+			"2-3 éve refluxos panaszokra gyomornedv-ellenálló tablettát szedtem. Kezelések kezdetekor elhagytam. Étrendem megváltoztatásával a tünetek megszűntek. Gyermekünk születése stresszes volt, de a kezelésekkel jobban kezelhetem. Hálás vagyok Vargha Zsoltnak és a csapatnak.",
 	},
 ];
 

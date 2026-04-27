@@ -49,7 +49,7 @@ const Hero = () => {
 				className="hidden sm:block absolute rounded-[100px] w-125 h-125 md:w-175 md:h-175 lg:w-200 lg:h-200 xl:w-225 xl:h-225 2xl:w-275 2xl:h-275 -right-15 md:-right-20 lg:-right-25 xl:-right-50 2xl:-right-40 -top-30 md:-top-40 lg:-top-50 xl:-top-60 2xl:-top-70 -rotate-12 overflow-hidden animate-slide-in-from-left"
 				aria-hidden="true">
 				<Image
-					src="/images/567.webp"
+					src="/images/refo/1.webp"
 					alt="Vargha Attila, a Neuropress Terápia alapítója"
 					className="w-[130%] h-[130%] object-cover object-bottom-right rotate-[12deg] left-[-15%] top-[20%] absolute"
 					draggable="false"
@@ -65,7 +65,7 @@ const Hero = () => {
 					<p className="text-xs text-gray-400 font-light tracking-wide">
 						Intézményvezető
 					</p>
-					<p className="text-sm font-semibold text-gray-900">Vargha Attila</p>
+					<p className="text-sm font-semibold text-gray-900">Vargha Zsolt</p>
 				</div>
 			</div>
 		</div>
