@@ -182,11 +182,24 @@ const Contact = () => {
 					duration={0.7}
 					threshold={0.3}
 					className="w-full">
-					<p className="text-lg font-light text-gray-500 text-center mb-16 w-full lg:w-1/2 mx-auto">
+					<p className="text-lg font-light text-gray-500 text-center mb-6 w-full lg:w-1/2 mx-auto">
 						{
 							"Töltsd ki az \u0171rlapot és hamarosan felvesszük veled a kapcsolatot az id\u0151pontegyeztetés érdekében."
 						}
 					</p>
+				</AnimatedContent>
+
+				<AnimatedContent
+					distance={40}
+					duration={0.7}
+					threshold={0.3}
+					className="w-full flex justify-center mb-16">
+					<div className="inline-flex items-center gap-2 px-4 py-2.5 bg-primary-light border-2 border-[var(--primary-color)] rounded-full">
+						<i className="fa-solid fa-clock text-primary text-sm animate-pulse" />
+						<span className="text-sm font-medium text-primary">
+							Helyek korlátozottak, az időpontok gyorsan betelnek!
+						</span>
+					</div>
 				</AnimatedContent>
 
 				<div className="flex flex-col lg:flex-row gap-10 items-start">
@@ -209,7 +222,7 @@ const Contact = () => {
 										onClick={() => setCardLocation(loc)}
 										className={`px-3 py-1 rounded-full text-xs font-medium transition-colors duration-200 ${
 											cardLocation === loc
-												? "bg-(--primary-color) text-white"
+												? "bg-primary text-white"
 												: "bg-white text-gray-500 hover:text-gray-800"
 										}`}>
 										{loc}
@@ -219,7 +232,7 @@ const Contact = () => {
 							<ul className="flex flex-col gap-5">
 								<li className="flex items-start gap-4">
 									<div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-										<i className="fa-solid fa-location-dot text-(--primary-color) text-sm" />
+										<i className="fa-solid fa-location-dot text-primary text-sm" />
 									</div>
 									<div>
 										<p className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-0.5">
@@ -232,7 +245,7 @@ const Contact = () => {
 								</li>
 								<li className="flex items-start gap-4">
 									<div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shrink-0 shadow-sm">
-										<i className="fa-solid fa-phone text-(--primary-color) text-sm" />
+										<i className="fa-solid fa-phone text-[var(--primary-color)] text-sm" />
 									</div>
 									<div>
 										<p className="text-xs font-medium text-gray-400 uppercase tracking-widest mb-0.5">
@@ -240,7 +253,7 @@ const Contact = () => {
 										</p>
 										<a
 											href={locations[cardLocation].phoneHref}
-											className="text-sm font-light text-gray-700 hover:text-(--primary-color) transition-colors">
+											className="text-sm font-light text-gray-700 hover:text-[var(--primary-color)] transition-colors">
 											{locations[cardLocation].phone}
 										</a>
 									</div>

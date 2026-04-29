@@ -37,9 +37,10 @@ const About = () => {
 							</div>
 							<p className="text-gray-700 font-light text-sm leading-relaxed italic mb-6">
 								&ldquo;Tedd azt, amit szeretsz és szeresd azt, amit
-								csinálsz.&rdquo; <br /> Vargha Zsolt Sebastian vagyok,
-								Budapesten a XII. kerületben, Győrben és Dunaszerdahelyen
-								vezetem a NeuroPress rendelőket, közel 20 éve.
+								csinálsz.&rdquo; <br /> Több mint 20 éve A természetes
+								gyógymódok szakértője! Egyénre szabottan állítja be a terápiát,
+								az okokra fókuszálva!  Hosszútávú eredmény, nem csak tüneti
+								javulás! Szerintem ha kifér a kis kép alá mehet ez a szöveg.
 							</p>
 							<div className="border-t border-gray-200 w-16 mb-4" />
 							<p className="text-sm font-medium text-gray-900">Vargha Zsolt</p>

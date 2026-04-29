@@ -4,11 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper/modules";
 import AnimatedContent from "./gsap/AnimatedContent";
 import FadeContent from "./gsap/FadeContent";
+import { useState, useRef, useEffect } from "react";
 
 const testimonials = [
 	{
 		name: "Nyári Dia",
 		profileImage: "/images/testi/1.webp",
+		fullImage: "/images/celebri-webp/2.webp",
 		symptom: "színésznő",
 		solution:
 			"„Nyári Dia életét évek óta megnehezítették a migrénes panaszok. Ha jött a fejgörcs, elvonult egy sötét szobába és még a fájdalomcsillapító sem enyhítette fájdalmát. Volt, hogy gyermekét is alig tudta ellátni, annyira szenvedett. Ma pedig, alig fél évvel az első kezelés után, búcsút intett a migrénnek és alig várja az allergiaszezont, ami korábban maga volt a rémálom számára. Vargha Zsolt és a NeuroPress Terápia segítségével szervezete ellanállóbb lett, ő pedig tudatosabb, jobban érti teste jelzéseit.",
@@ -17,28 +19,33 @@ const testimonials = [
 	{
 		name: "Vastag Csaba",
 		profileImage: "/images/testi/4.webp",
+		fullImage: "/images/celebri-webp/4.webp",
 		symptom: "énekes, színész",
 		solution:
-			"„Vastag Csaba évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
+			"„Vastag Csaba évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.",
 		rating: 5,
 	},
 	{
-		name: "Vastaghné Domján Evelin",
+		name: "Vastagné Domján Evelin",
 		profileImage: "/images/testi/3.webp",
+		fullImage: "/images/celebri-webp/evel.webp",
 		symptom: "színésznő",
 		solution:
-			"„Vastaghné Domján Evelin évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
+			"Evelin hormonális eredetű bőrproblémákkal érkezett hozzánk, sok egyéb lehetőség kipróbálása után. A kezelések során fokozatos változást tapasztalt, bőre látványosan szebb lett, közérzete javult, és a szervezete egyre kiegyensúlyozottabban működött. Számunkra külön öröm, hogy Evelin azóta is bizalommal fordul a NeuroPress csapatához, ha úgy érzi, szervezetének ismét támogatásra van szüksége. Története jól mutatja, hogy a tartós változás sokszor ott kezdődik, amikor nem csupán a külső tünetekre figyelünk, hanem a test működésének mélyebb összefüggéseit is megértjük.",
 		rating: 5,
 	},
 	{
 		name: "Vajna Tímea",
 		profileImage: "/images/testi/2.webp",
+		fullImage: "/images/celebri-webp/3.webp",
 		symptom: "üzletasszony, műsorvezető",
 		solution:
-			"„Vajna Tímea évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.”",
+			"Vajna Tímea is nálunk járt, és örömmel osztotta meg velünk pozitív tapasztalatait. Elmondása alapján már a kezelések elején érezte a változást: javulást tapasztalt a közérzetében, az emésztésében, a hormonális működésében, valamint a hangulatában is. Külön öröm számunkra, hogy a vérképe és a petefészek működése terén is kedvező változásokról számolt be. Tímea bizalommal fordult Zsolthoz és a NeuroPress csapatához, és saját élménye alapján szívből ajánlja a terápiát azoknak, akik természetes támogatást keresnek szervezetük egyensúlyának helyreállításához.",
 		rating: 5,
 	},
 ];
+
+type Testimonial = (typeof testimonials)[0];
 
 const SLIDES_PER_VIEW_DESKTOP = 3;
 const showArrows = testimonials.length > SLIDES_PER_VIEW_DESKTOP;
@@ -56,6 +63,115 @@ const Stars = ({ count }: { count: number }) => (
 		))}
 	</div>
 );
+
+const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
+	const [imageMode, setImageMode] = useState(false);
+	const cardRef = useRef<HTMLDivElement>(null);
+	const revealingRef = useRef(false);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				const entry = entries[0];
+				if (entry.isIntersecting && !revealingRef.current) {
+					revealingRef.current = true;
+					setImageMode(true);
+					setTimeout(() => {
+						setImageMode(false);
+					}, 1400);
+					observer.disconnect();
+				}
+			},
+			{ threshold: 0.2, rootMargin: "0px" },
+		);
+		if (cardRef.current) observer.observe(cardRef.current);
+		return () => observer.disconnect();
+	}, []);
+
+	const handleProfileClick = (e: React.MouseEvent) => {
+		e.stopPropagation();
+		setImageMode(true);
+	};
+
+	const handleCardClick = () => {
+		if (imageMode) setImageMode(false);
+	};
+
+	return (
+		<div
+			ref={cardRef}
+			onClick={handleCardClick}
+			style={{ minHeight: "500px" }}
+			className={`relative rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 my-3${imageMode ? " cursor-pointer" : ""}`}>
+			{/* Full-image layer */}
+			<div
+				className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+					imageMode
+						? "opacity-100 scale-100"
+						: "opacity-0 scale-105 pointer-events-none"
+				}`}>
+				<Image
+					src={testimonial.fullImage}
+					alt={testimonial.name}
+					fill
+					className="object-cover object-top"
+				/>
+				<div className="absolute inset-0 flex items-end p-5">
+					<p className="text-white/80 text-xs">
+						Kattints a tartalom visszatöltéséhez
+					</p>
+				</div>
+			</div>
+
+			{/* Content layer */}
+			<div
+				className={`absolute inset-0 bg-white p-6 flex flex-col transition-all duration-700 ease-in-out ${
+					imageMode
+						? "opacity-0 translate-y-3 pointer-events-none"
+						: "opacity-100 translate-y-0"
+				}`}>
+				{/* Quote mark */}
+				<div className="text-4xl leading-none text-primary font-serif mb-3 select-none">
+					&ldquo;
+				</div>
+
+				{/* Review text */}
+				<p className="text-gray-600 font-light text-sm leading-relaxed flex-1 mb-4 line-clamp-8">
+					{testimonial.solution}
+				</p>
+
+				{/* Stars */}
+				<Stars count={testimonial.rating} />
+
+				{/* Divider */}
+				<div className="border-t border-gray-100 my-4" />
+
+				{/* Author */}
+				<div className="flex items-center gap-3">
+					<div
+						onClick={handleProfileClick}
+						className="relative w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0 cursor-pointer ring-2 ring-transparent hover:ring-[var(--primary-color)] hover:ring-offset-1 transition-all duration-200"
+						title="Kép megtekintése">
+						<Image
+							src={testimonial.profileImage}
+							alt={`${testimonial.name} profilképe`}
+							fill
+							className="object-cover"
+						/>
+					</div>
+					<div className="text-left min-w-0">
+						<p className="text-sm font-medium text-gray-900 truncate">
+							{testimonial.name}
+						</p>
+						<p className="text-xs font-light text-gray-400 truncate">
+							{testimonial.symptom}
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
 const Testimonials = () => {
 	return (
@@ -107,44 +223,8 @@ const Testimonials = () => {
 						}
 						loop>
 						{testimonials.map((testimonial, index) => (
-							<SwiperSlide key={index}>
-								<div className="bg-white rounded-2xl p-6 flex flex-col shadow-sm hover:shadow-md transition-shadow duration-300 h-full my-3">
-									{/* Quote mark */}
-									<div className="text-4xl leading-none text-(--primary-color) font-serif mb-3 select-none">
-										&ldquo;
-									</div>
-
-									{/* Review text */}
-									<p className="text-gray-600 font-light text-sm leading-relaxed flex-1 mb-6">
-										{testimonial.solution}
-									</p>
-
-									{/* Stars */}
-									<Stars count={testimonial.rating} />
-
-									{/* Divider */}
-									<div className="border-t border-gray-100 my-4" />
-
-									{/* Author */}
-									<div className="flex items-center gap-3">
-										<div className="relative w-10 h-10 rounded-full overflow-hidden bg-gray-100 shrink-0">
-											<Image
-												src={testimonial.profileImage}
-												alt={`${testimonial.name} profilképe`}
-												fill
-												className="object-cover"
-											/>
-										</div>
-										<div className="text-left min-w-0">
-											<p className="text-sm font-medium text-gray-900 truncate">
-												{testimonial.name}
-											</p>
-											<p className="text-xs font-light text-gray-400 truncate">
-												{testimonial.symptom}
-											</p>
-										</div>
-									</div>
-								</div>
+							<SwiperSlide key={index} className="h-auto">
+								<TestimonialCard testimonial={testimonial} />
 							</SwiperSlide>
 						))}
 					</Swiper>

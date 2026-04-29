@@ -10,14 +10,13 @@ import { useState, useRef, useEffect } from "react";
 
 const testimonials = [
 	{
-		name: "Kovács Gergelyné Kránicz Szilvia",
-		link: "https://www.neuropress.hu/elementor-17040/",
-		profileImage: "/images/stories/4.webp",
+		name: "Galambos Franciska",
+		link: "https://www.neuropress.hu/galambos-franciska-albert-baba/",
+		profileImage: "/images/stories/1.webp",
 		symptom: "Termékenységi zavar",
 		solution:
 			"Négy és fél év hormonkezelés és inszemináció után Vargha Zsolt terápiája következett. Szigorú életmód- és táplálkozási szabályok, eleinte fájdalmas kezelések, de 5 hónappal később pozitív terhességi teszt. Terhesen is jártam kezelésre. Albert megszületésével kiteljesedett a családunk.",
 	},
-
 	{
 		name: "Linda",
 		link: "https://www.neuropress.hu/linda/",
