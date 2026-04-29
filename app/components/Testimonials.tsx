@@ -28,7 +28,7 @@ const testimonials = [
 	{
 		name: "Vastagné Domján Evelin",
 		profileImage: "/images/testi/3.webp",
-		fullImage: "/images/celebri-webp/evel.webp",
+		fullImage: "/images/celebri-webp/evelin.webp",
 		symptom: "színésznő",
 		solution:
 			"Evelin hormonális eredetű bőrproblémákkal érkezett hozzánk, sok egyéb lehetőség kipróbálása után. A kezelések során fokozatos változást tapasztalt, bőre látványosan szebb lett, közérzete javult, és a szervezete egyre kiegyensúlyozottabban működött. Számunkra külön öröm, hogy Evelin azóta is bizalommal fordul a NeuroPress csapatához, ha úgy érzi, szervezetének ismét támogatásra van szüksége. Története jól mutatja, hogy a tartós változás sokszor ott kezdődik, amikor nem csupán a külső tünetekre figyelünk, hanem a test működésének mélyebb összefüggéseit is megértjük.",
