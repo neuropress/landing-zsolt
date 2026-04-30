@@ -19,7 +19,7 @@ const symptoms = [
 	{
 		icon: "fa-regular fa-heart-pulse",
 		title: "Bőrgyógyászati panaszok",
-		image: "/images/stock/14.webp",
+		image: "/images/celebri-webp/evel.webp",
 	},
 	{
 		icon: "fa-regular fa-bolt",

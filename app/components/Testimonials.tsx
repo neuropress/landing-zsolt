@@ -13,7 +13,7 @@ const testimonials = [
 		fullImage: "/images/celebri-webp/2.webp",
 		symptom: "színésznő",
 		solution:
-			"„Nyári Dia életét évek óta megnehezítették a migrénes panaszok. Ha jött a fejgörcs, elvonult egy sötét szobába és még a fájdalomcsillapító sem enyhítette fájdalmát. Volt, hogy gyermekét is alig tudta ellátni, annyira szenvedett. Ma pedig, alig fél évvel az első kezelés után, búcsút intett a migrénnek és alig várja az allergiaszezont, ami korábban maga volt a rémálom számára. Vargha Zsolt és a NeuroPress Terápia segítségével szervezete ellanállóbb lett, ő pedig tudatosabb, jobban érti teste jelzéseit.",
+			"Nyári Dia életét évek óta megnehezítették a migrénes panaszok. Ha jött a fejgörcs, elvonult egy sötét szobába és még a fájdalomcsillapító sem enyhítette fájdalmát. Volt, hogy gyermekét is alig tudta ellátni, annyira szenvedett. Ma pedig, alig fél évvel az első kezelés után, búcsút intett a migrénnek és alig várja az allergiaszezont, ami korábban maga volt a rémálom számára. Vargha Zsolt és a NeuroPress Terápia segítségével szervezete ellanállóbb lett, ő pedig tudatosabb, jobban érti teste jelzéseit.",
 		rating: 5,
 	},
 	{
@@ -22,7 +22,7 @@ const testimonials = [
 		fullImage: "/images/celebri-webp/4.webp",
 		symptom: "énekes, színész",
 		solution:
-			"„Vastag Csaba évek óta küzdött a krónikus fáradtság és a gyakori megfázás tüneteivel. A mindennapi teendők is nehézséget okoztak számára, és a színpadon sem tudta mindig a legjobb formáját hozni. A NeuroPress Terápia segítségével azonban újra energikusnak és egészségesnek érzi magát. Ma már nemcsak a színpadon, hanem a mindennapokban is élvezi az életet, és hálás Vargha Zsoltnak a támogatásért.",
+			"Vastag Csaba aktív sportolóként és előadóként számára mindig is fontos volt szervezete ellenálló képességének tudatos támogatása. A rendszeres koncertek, éjszakai fellépések és utazások miatt prevenciós céllal kereste fel a NeuroPress Terápiát. Tapasztalata szerint ellenállóbbnak érzi magát, és ha megbetegszik, a felépülés rövidebb ideig tart. Története jól mutatja, hogy a NeuroPress Terápia azok számára is értékes, akik hosszú távon szeretnék megőrizni vitalitásukat és teljesítőképességüket.",
 		rating: 5,
 	},
 	{
