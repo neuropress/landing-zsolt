@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "./components/Hero";
 import Symptoms from "./components/Symptoms";
 import Symptoms2 from "./components/Symptoms2";
+import KinekValo from "./components/KinekValo";
 import Testimonials from "./components/Testimonials";
 import About from "./components/About";
 import Process from "./components/Process";
@@ -16,6 +17,7 @@ export default function Home() {
 			<Hero />
 			<Symptoms2 />
 			<Stories />
+			<KinekValo />
 			<About />
 			<Process />
 			<Prices />

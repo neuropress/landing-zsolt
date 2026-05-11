@@ -14,6 +14,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/galambos-franciska-albert-baba/",
 		profileImage: "/images/stories/1.webp",
 		symptom: "Termékenységi zavar",
+		duration: "4,5 év hormonkezelés után",
 		solution:
 			"Négy és fél év hormonkezelés és inszemináció után Vargha Zsolt terápiája következett. Szigorú életmód- és táplálkozási szabályok, eleinte fájdalmas kezelések, de 5 hónappal később pozitív terhességi teszt. Terhesen is jártam kezelésre. Albert megszületésével kiteljesedett a családunk.",
 	},
@@ -22,6 +23,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/linda/",
 		profileImage: "/images/stories/5.webp",
 		symptom: "Ekcéma, menstruációs panaszok, emésztési problémák",
+		duration: "Évek óta tartó tünetek",
 		solution:
 			"Nagy László ajánlására kerestem fel a Neuropresst menstruációs, emésztési problémák, ekcéma és aranyér miatt. Vargha Zsolt biorezonanciás vizsgálat után azonnal kezelésbe vett. Öt hónap alatt heti két kezeléssel tünetmentes lettem, tele energiával.",
 	},
@@ -30,6 +32,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/somodi-aron/",
 		profileImage: "/images/stories/9.webp",
 		symptom: "Asztma, allergia",
+		duration: "Visszatérő tünetek, szteroidfüggés",
 		solution:
 			"Több mint tíz éven át kajakoztam, majd visszatért egy asztmás tünet. Szteroiddal kezelték, nem tudtam elhagyni. A NeuroPress terápia 7 hónap után javulást hozott. Új szemléletet tanultam, gyógyszer nélkül gyógyultam. Heti háromszor erősen sportolok.",
 	},
@@ -38,6 +41,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/andrea-vargova/",
 		profileImage: "/images/stories/3.webp",
 		symptom: "Termékenységi zavar",
+		duration: "9 év próbálkozás, 4 sikertelen beültetés után",
 		solution:
 			"Kilenc év próbálkozás, négy sikertelen beültetés után 2021 májusában kezdtük a Neuropress terápiát. Másfél év kitartás után az ötödik beültetés pozitív lett. 2023 júniusában megszületett kislányunk, Zoé. Köszönet Vargha Zsoltnak és Viktóriának!",
 	},
@@ -46,6 +50,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/dr-kalmar-sandor-floris/",
 		profileImage: "/images/stories/4.webp",
 		symptom: "Reflux, derékfájás",
+		duration: "Évek óta tartó protonpumpa-gátló szedés után",
 		solution:
 			"Sok éve refluxos tünetekkel küszködtem, napi protonpumpa-gátlókat szedtem. Vargha Zsolt rávilágított a tünetek összefüggéseire. Két hónap után letettem a gyógyszereket. Néhány hónap alatt szinte minden tünet megszűnt, csak életmódot kellett változtatni.",
 	},
@@ -54,6 +59,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/lukovics-janos/",
 		profileImage: "/images/stories/6.webp",
 		symptom: "Szédülés, fejfájás",
+		duration: "Hónapok orvosi vizsgálatok és gyógyszerek után",
 		solution:
 			"2020-ban szédülés, gyengeség és fejfájás kínzott. Több orvos, gyógyszer, semmi javulás. Depresszió és pánikbetegség társult. 2021-ben a feleségem unszolására Vargha Zsolt személyre szabott terápiát írt elő. Hónapok alatt minden tünet elmúlt. Köszönet Marcsinak is!",
 	},
@@ -62,6 +68,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/otvosne-melinda/",
 		profileImage: "/images/stories/8.webp",
 		symptom: "Magas vérnyomás, alvászavar",
+		duration: "Covid utáni elhúzódó tünetek",
 		solution:
 			"Covid után rossz közérzet, magas vérnyomás, kimerültség, alvászavar kínzott. Gyógyszeres kezelés sem segített. Három hónap Neuropress terápia után tünetmentes vagyok. Továbbra is folytatom a jó állapot megőrzése érdekében. Köszönet Vargha Zsoltnak és Rékának!",
 	},
@@ -70,6 +77,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/mirko-baba/",
 		profileImage: "/images/stories/7.webp",
 		symptom: "Termékenységi zavar",
+		duration: "Babatervezés, ellenőrzés",
 		solution:
 			"Barbi mesélt a NeuroPress Terápiáról. Férjemmel babát terveztünk, ellenőrizni akartam a szervezetem. Néhány kezelés után áldott állapotba kerültem! 2022.09.18-án megszületett Mirkó, aki új értelmet adott életünknek. A Neuropressnél születnek a csodák.",
 	},
@@ -78,6 +86,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/andersh-gabor/",
 		profileImage: "/images/stories/2.webp",
 		symptom: "Emésztőrendszeri panaszok, reflux",
+		duration: "2-3 év gyógyszeres kezelés után",
 		solution:
 			"2-3 éve refluxos panaszokra gyomornedv-ellenálló tablettát szedtem. Kezelések kezdetekor elhagytam. Étrendem megváltoztatásával a tünetek megszűntek. Gyermekünk születése stresszes volt, de a kezelésekkel jobban kezelhetem. Hálás vagyok Vargha Zsoltnak és a csapatnak.",
 	},
@@ -176,11 +185,14 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 
 				<div className="border-t border-gray-100 my-4" />
 
-				<h4 className="text-md font-semibold text-gray-800 mb-2 line-clamp-2">
+				<h4 className="text-md font-semibold text-gray-800 line-clamp-2">
 					{testimonial.symptom}
 				</h4>
+				<p className="text-xs font-medium text-primary mb-2">
+					{testimonial.duration}
+				</p>
 
-				<p className="text-gray-600 font-light text-sm leading-relaxed flex-1 mb-4 line-clamp-5">
+				<p className="text-gray-600 font-light text-sm leading-relaxed flex-1 mb-4 line-clamp-4">
 					{testimonial.solution}
 				</p>
 

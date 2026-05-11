@@ -31,10 +31,63 @@ const Hero = () => {
 					<h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
 						Amikor már mindent kipróbáltál és még sincs eredmény
 					</h1>
-					<p className="text-lg md:text-xl text-gray-700 mb-8 font-light">
+					{/* <p className="text-lg md:text-xl text-gray-700 mb-3 font-light">
 						Neuropress - egyedileg továbbfejlesztett, reflexológián alapuló
 						komplex terápia
+					</p> */}
+					<p className="text-lg md:text-xl text-primary font-semibold mb-2">
+						Segítünk megtalálni a tüneteid valódi okát!
 					</p>
+					{/* <p className="text-base md:text-lg text-gray-800 font-medium mb-6">
+						Jelentkezz be állapotfelmérésre.
+					</p> */}
+					<ul className="mb-8 space-y-1">
+						<li className="flex items-center gap-2 text-base md:text-lg text-gray-800">
+							<svg
+								className="w-5 h-5 text-primary flex-shrink-0"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2.5}
+									d="M5 13l4 4L19 7"
+								/>
+							</svg>
+							20+ év tapasztalat
+						</li>
+						<li className="flex items-center gap-2 text-base md:text-lg text-gray-800">
+							<svg
+								className="w-5 h-5 text-primary flex-shrink-0"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2.5}
+									d="M5 13l4 4L19 7"
+								/>
+							</svg>
+							több ezer kezelt páciens
+						</li>
+						<li className="flex items-center gap-2 text-base md:text-lg text-gray-800">
+							<svg
+								className="w-5 h-5 text-primary flex-shrink-0"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24">
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth={2.5}
+									d="M5 13l4 4L19 7"
+								/>
+							</svg>
+							egyéni állapotfelmérés
+						</li>
+					</ul>
 					<a href="#contact" className="primary-button inline-block">
 						Jelentkezem állapotfelmérésre!
 					</a>

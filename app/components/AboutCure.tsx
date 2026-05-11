@@ -4,13 +4,30 @@ import Image from "next/image";
 import AnimatedContent from "./gsap/AnimatedContent";
 import ScrollStack, { ScrollStackItem } from "./gsap/ScrollStack";
 
-const blocks = [
+type Block = {
+	borderColor: string;
+	tagColor: string;
+	tag: string;
+	title: string;
+	body: string;
+	extraIntro?: string;
+	extraTitle?: string;
+	extraList?: string[];
+	extraListVariant?: "negative" | "positive";
+	image: string;
+	imageAlt: string;
+	imageRight: boolean;
+};
+
+const blocks: Block[] = [
 	{
 		borderColor: "border-l-[var(--accent-color)]",
 		tagColor: "text-(--accent-color)",
 		tag: "Terápia",
 		title: "Személyre szabott kezelési terv",
-		body: "Nincs két egyforma páciens – ezért nincs két egyforma terápia sem. A reflexológián alapuló Neuropress módszer olyan intenzitású ingerekkel dolgozik, ahol az idegrendszer már reagálni kezd, és az fMRI kutatások által igazolt megközelítésünk nem a tüneteket kezeli, hanem a működést állítja helyre az idegrendszeri inger-válasz-változások révén.",
+		body: "Nincs két egyforma páciens – ezért nincs két egyforma terápia sem. A Neuropress rendszerszinten közelíti meg a test működését, és kifejezetten a fájdalom hatásmechanizmusára épül.",
+		extraIntro:
+			"Míg a reflexológia zónákon keresztül, finom stimulációval hat, addig a Neuropressnél a pontosan adagolt inger tudatos idegrendszeri válaszreakciót vált ki: a fájdalom révén az agy figyelme az érintett területre irányul, és aktiválódnak a szervezet belső szabályozó folyamatai.",
 		image: "/images/refo/14.webp",
 		imageAlt: "Személyre szabott kezelés",
 		imageRight: false,
@@ -20,8 +37,15 @@ const blocks = [
 		tagColor: "text-(--primary-color)",
 		tag: "Tünetek",
 		title: "Feltárjuk a tünetek valódi okát",
-		body: "A legtöbb kezelés csak a tüneteket kezeli – mi az okokat keressük. A Neuropress állapotfelmérés során részletesen feltérképezzük tested és idegrendszered állapotát, hogy ne csak átmeneti enyhülést, hanem tartós javulást érhessünk el.",
-		image: "/images/refo/17.webp",
+		body: "A legtöbb kezelés csak a tüneteket kezeli – mi az okokat keressük. A Neuropress állapotfelmérés során részletesen feltérképezzük tested és idegrendszered állapotát.",
+		extraTitle: "A Neuropress nem:",
+		extraList: [
+			"nem masszázs",
+			"nem tüneti kezelés",
+			"nem gyors „csodaszer”",
+		],
+		extraListVariant: "negative",
+		image: "/images/refo/21.webp",
 		imageAlt: "Tünetek feltárása",
 		imageRight: true,
 	},
@@ -30,7 +54,13 @@ const blocks = [
 		tagColor: "text-(--secondary-color)",
 		tag: "Életmód",
 		title: "Komplex életmódbeli támogatás",
-		body: "A kezelések mellett étkezési és életmódbeli tanácsokkal is segítünk, hogy a változások hosszú távon is fennmaradjanak. Célunk, hogy ne csak jobb légy a terápia alatt, hanem utána is – önállóan, tudatosan.",
+		body: "A kezelések mellett étkezési és életmódbeli tanácsokkal is segítünk, hogy a változások hosszú távon is fennmaradjanak – önállóan, tudatosan.",
+		extraTitle: "A Neuropress",
+		extraList: [
+			"egy idegrendszeri alapú feltáró módszer",
+			"amely az okokat keresi, nem csak a tüneteket",
+		],
+		extraListVariant: "positive",
 		image: "/images/refo/4.webp",
 		imageAlt: "Életmódbeli támogatás",
 		imageRight: true,
@@ -64,13 +94,11 @@ const AboutCure = () => {
 						threshold={0.3}
 						className="w-full">
 						<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center w-full lg:w-3/4 mx-auto">
-							Miért jobb a Neuropress terápia, mint egy hagyományos
-							reflexológiai kezelés?
+							Mitől más a Neuropress mint a Reflexológia?
 						</h2>
 						<p className="text-lg md:text-xl text-gray-700 font-light text-center w-full lg:w-3/4 mx-auto">
-							A Neuropress nem csak reflexológia: komplexen vizsgáljuk a tested
-							és idegrendszered, hogy személyre szabott, tartós javulást hozó
-							terápiát nyújtsunk.
+							Idegrendszeri alapú feltáró módszer, amely az okokat keresi – nem
+							csak a tüneteket.
 						</p>
 					</AnimatedContent>
 				</div>
@@ -108,12 +136,68 @@ const AboutCure = () => {
 									className={`text-xs font-medium uppercase tracking-widest mb-3 ${block.tagColor}`}>
 									{block.tag}
 								</span>
-								<h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4 leading-snug">
+								<h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug">
 									{block.title}
 								</h3>
-								<p className="text-gray-600 font-light leading-relaxed">
+								<p className="text-gray-600 font-light leading-relaxed text-sm md:text-base mb-3">
 									{block.body}
 								</p>
+								{block.extraIntro && (
+									<p className="text-gray-600 font-light leading-relaxed text-sm md:text-base">
+										{block.extraIntro}
+									</p>
+								)}
+								{block.extraTitle && (
+									<p className="text-sm md:text-base font-semibold text-gray-800 mt-2 mb-2">
+										{block.extraTitle}
+									</p>
+								)}
+								{block.extraList && block.extraListVariant === "negative" && (
+									<ul className="space-y-1.5">
+										{block.extraList.map((item, i) => (
+											<li
+												key={i}
+												className="flex items-center gap-2 text-sm md:text-base text-gray-700 font-light leading-relaxed">
+												<svg
+													className="w-4 h-4 text-(--primary-color) shrink-0"
+													fill="none"
+													stroke="currentColor"
+													viewBox="0 0 24 24">
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														strokeWidth={2.5}
+														d="M6 18L18 6M6 6l12 12"
+													/>
+												</svg>
+												{item}
+											</li>
+										))}
+									</ul>
+								)}
+								{block.extraList && block.extraListVariant === "positive" && (
+									<ul className="space-y-1.5">
+										{block.extraList.map((item, i) => (
+											<li
+												key={i}
+												className="flex items-center gap-2 text-sm md:text-base text-gray-700 font-light leading-relaxed">
+												<svg
+													className="w-4 h-4 text-(--secondary-color) shrink-0"
+													fill="none"
+													stroke="currentColor"
+													viewBox="0 0 24 24">
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														strokeWidth={2.5}
+														d="M5 13l4 4L19 7"
+													/>
+												</svg>
+												{item}
+											</li>
+										))}
+									</ul>
+								)}
 							</div>
 						</div>
 					</ScrollStackItem>
