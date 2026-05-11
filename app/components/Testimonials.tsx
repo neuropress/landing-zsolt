@@ -101,7 +101,7 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testimonial }) => {
 		<div
 			ref={cardRef}
 			onClick={handleCardClick}
-			style={{ minHeight: "500px" }}
+			style={{ minHeight: "550px" }}
 			className={`relative rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 my-3${imageMode ? " cursor-pointer" : ""}`}>
 			{/* Full-image layer */}
 			<div
