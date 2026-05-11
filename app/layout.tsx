@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 		"immunrendszer erősítés",
 	],
 	authors: [{ name: "Vargha Attila" }],
-	creator: "Neuropress Terápia",
+	creator: "Prisma Solutions",
 	publisher: "Neuropress Terápia",
 	metadataBase: new URL("https://neuropress.hu"),
 	alternates: {
