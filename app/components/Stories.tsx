@@ -32,7 +32,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/somodi-aron/",
 		profileImage: "/images/stories/9.webp",
 		symptom: "Asztma, allergia",
-		duration: "Visszatérő tünetek, szteroidfüggés",
+		duration: "Visszatérő tünetek, 7 hónap alatt rendbajöttem",
 		solution:
 			"Több mint tíz éven át kajakoztam, majd visszatért egy asztmás tünet. Szteroiddal kezelték, nem tudtam elhagyni. A NeuroPress terápia 7 hónap után javulást hozott. Új szemléletet tanultam, gyógyszer nélkül gyógyultam. Heti háromszor erősen sportolok.",
 	},
@@ -59,7 +59,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/lukovics-janos/",
 		profileImage: "/images/stories/6.webp",
 		symptom: "Szédülés, fejfájás",
-		duration: "Hónapok orvosi vizsgálatok és gyógyszerek után",
+		duration: "Több hónapos orvosi vizsgálatok és gyógyszerek után",
 		solution:
 			"2020-ban szédülés, gyengeség és fejfájás kínzott. Több orvos, gyógyszer, semmi javulás. Depresszió és pánikbetegség társult. 2021-ben a feleségem unszolására Vargha Zsolt személyre szabott terápiát írt elő. Hónapok alatt minden tünet elmúlt. Köszönet Marcsinak is!",
 	},
@@ -77,7 +77,7 @@ const testimonials = [
 		link: "https://www.neuropress.hu/mirko-baba/",
 		profileImage: "/images/stories/7.webp",
 		symptom: "Termékenységi zavar",
-		duration: "Babatervezés, ellenőrzés",
+		duration: "Felmérés céljából érkezett a Neuropresshez",
 		solution:
 			"Barbi mesélt a NeuroPress Terápiáról. Férjemmel babát terveztünk, ellenőrizni akartam a szervezetem. Néhány kezelés után áldott állapotba kerültem! 2022.09.18-án megszületett Mirkó, aki új értelmet adott életünknek. A Neuropressnél születnek a csodák.",
 	},
