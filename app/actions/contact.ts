@@ -4,8 +4,8 @@ import nodemailer from "nodemailer";
 
 const LOCATION_EMAILS: Record<string, string> = {
 	"Budapest XII. ker": "neuropressbuda12@gmail.com",
-	// Győr: "neuropressgyor@gmail.com",
-	Győr: "dani.szoverfi@prismasolutions.ro",
+	Győr: "neuropressgyor@gmail.com",
+	// Győr: "dani.szoverfi@prismasolutions.ro",
 	Dunaszerdahely: "neuropress@azet.sk",
 };
 
