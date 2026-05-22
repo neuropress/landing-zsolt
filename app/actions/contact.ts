@@ -135,5 +135,48 @@ export async function sendContactEmail(
 		};
 	}
 
+	await saveSubmissionToDb({
+		name,
+		email,
+		phone,
+		message,
+		service_name: therapy,
+		location,
+	});
+
 	return { ok: true };
+}
+
+async function saveSubmissionToDb(payload: {
+	name: string;
+	email: string;
+	phone: string;
+	message: string;
+	service_name: string;
+	location: string;
+}) {
+	const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+	const apiKey = process.env.CONTACT_API_KEY;
+	if (!apiUrl) {
+		console.error("Missing NEXT_PUBLIC_API_URL — skipping DB save");
+		return;
+	}
+
+	try {
+		const res = await fetch(`${apiUrl}/api/contact`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				...(apiKey ? { "X-Api-Key": apiKey } : {}),
+			},
+			body: JSON.stringify(payload),
+		});
+
+		if (!res.ok) {
+			const body = await res.text();
+			console.error(`DB save failed (${res.status}):`, body);
+		}
+	} catch (err) {
+		console.error("DB save request threw:", err);
+	}
 }

@@ -59,9 +59,11 @@ const Hero = () => {
 						egyéni állapotfelmérés
 					</li>
 				</ul>
-				<a href="#contact" className="primary-button inline-block">
-					Jelentkezem állapotfelmérésre!
-				</a>
+				<div>
+					<a href="#contact" className="primary-button inline-block">
+						Jelentkezem állapotfelmérésre!
+					</a>
+				</div>
 			</div>
 			{/* Mobile decorative blob */}
 			<div
