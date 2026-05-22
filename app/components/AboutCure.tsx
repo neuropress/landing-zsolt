@@ -1,8 +1,6 @@
 "use client";
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import AnimatedContent from "./gsap/AnimatedContent";
-import ScrollStack, { ScrollStackItem } from "./gsap/ScrollStack";
 
 type Block = {
 	borderColor: string;
@@ -39,11 +37,7 @@ const blocks: Block[] = [
 		title: "Feltárjuk a tünetek valódi okát",
 		body: "A legtöbb kezelés csak a tüneteket kezeli – mi az okokat keressük. A Neuropress állapotfelmérés során részletesen feltérképezzük tested és idegrendszered állapotát.",
 		extraTitle: "A Neuropress nem:",
-		extraList: [
-			"nem masszázs",
-			"nem tüneti kezelés",
-			"nem gyors „csodaszer”",
-		],
+		extraList: ["nem masszázs", "nem tüneti kezelés", "nem gyors „csodaszer”"],
 		extraListVariant: "negative",
 		image: "/images/refo/21.webp",
 		imageAlt: "Tünetek feltárása",
@@ -68,58 +62,34 @@ const blocks: Block[] = [
 ];
 
 const AboutCure = () => {
-	const [stackPos, setStackPos] = useState("35%");
-	const [scaleEndPos, setScaleEndPos] = useState("30%");
-
-	useEffect(() => {
-		const update = () => {
-			const mobile = window.innerWidth < 768;
-			setStackPos(mobile ? "15%" : "35%");
-			// scaleEndPos must be numerically smaller than stackPos so the
-			// triggerEnd > triggerStart invariant holds and scaling stays smooth.
-			setScaleEndPos(mobile ? "5%" : "30%");
-		};
-		update();
-		window.addEventListener("resize", update);
-		return () => window.removeEventListener("resize", update);
-	}, []);
-
 	return (
 		<section className="w-full bg-white pt-20">
-			<div className="hidden md:block sticky top-0 z-20 bg-white py-6">
-				<div className="max-w-7xl mx-auto px-4 md:px-8">
-					<AnimatedContent
-						distance={40}
-						duration={0.7}
-						threshold={0.3}
-						className="w-full">
-						<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center w-full lg:w-3/4 mx-auto">
-							Mitől más a Neuropress mint a Reflexológia?
-						</h2>
-						<p className="text-lg md:text-xl text-gray-700 font-light text-center w-full lg:w-3/4 mx-auto">
-							Idegrendszeri alapú feltáró módszer, amely az okokat keresi – nem
-							csak a tüneteket.
-						</p>
-					</AnimatedContent>
-				</div>
+			<div className="max-w-7xl mx-auto px-4 md:px-8">
+				<AnimatedContent
+					distance={40}
+					duration={0.7}
+					threshold={0.3}
+					className="w-full">
+					<h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 text-center w-full lg:w-3/4 mx-auto">
+						Mitől más a Neuropress mint a Reflexológia?
+					</h2>
+					<p className="text-lg md:text-xl text-gray-700 font-light text-center w-full lg:w-3/4 mx-auto">
+						Idegrendszeri alapú feltáró módszer, amely az okokat keresi – nem
+						csak a tüneteket.
+					</p>
+				</AnimatedContent>
 			</div>
 
-			<ScrollStack
-				useWindowScroll={true}
-				innerClassName="px-4 md:px-8 max-w-7xl mx-auto"
-				bottomPadding="pb-[50vh]"
-				itemDistance={70}
-				itemScale={0.03}
-				itemStackDistance={18}
-				stackPosition={stackPos}
-				scaleEndPosition={scaleEndPos}
-				baseScale={0.9}>
+			<div className="flex flex-col gap-8 max-w-7xl mx-auto px-4 md:px-8 mt-8 pb-20">
 				{blocks.map((block, index) => (
-					<ScrollStackItem
+					<AnimatedContent
 						key={index}
-						itemClassName="!p-0 !h-auto overflow-hidden">
+						distance={40}
+						duration={0.6}
+						threshold={0.2}
+						delay={index * 0.1}>
 						<div
-							className={`flex flex-col ${block.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} bg-primary-light border-l-4 ${block.borderColor}`}>
+							className={`flex flex-col ${block.imageRight ? "lg:flex-row" : "lg:flex-row-reverse"} bg-primary-light border-l-4 ${block.borderColor} overflow-hidden rounded-lg shadow-md`}>
 							{/* Image — top on mobile, side panel on desktop */}
 							<div className="relative w-full h-52 lg:w-2/5 lg:h-auto lg:min-h-72 shrink-0">
 								<Image
@@ -200,9 +170,9 @@ const AboutCure = () => {
 								)}
 							</div>
 						</div>
-					</ScrollStackItem>
+					</AnimatedContent>
 				))}
-			</ScrollStack>
+			</div>
 		</section>
 	);
 };
