@@ -10,6 +10,10 @@ const Hero = () => {
 					Amikor már mindent kipróbáltál és még sincs eredmény
 				</h1>
 				<p className="text-lg md:text-xl text-primary font-semibold mb-2">
+					<i className="fas fa-location-dot mr-2" />
+					Budapest - Győr - Dunaszerdahely
+				</p>
+				<p className="text-lg md:text-xl text-primary font-semibold mb-2">
 					Segítünk megtalálni a tüneteid valódi okát!
 				</p>
 				<ul className="mb-8 space-y-1">
