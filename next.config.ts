@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: { unoptimized: true }, // webp already optimized; saves CDN requests + image quota
 };
 
 export default nextConfig;
